@@ -1,5 +1,4 @@
 from selene import browser
-from selene.config import base_url
 from selene.support.jquery_style_selectors import s
 
 from src.pages.base_page import BasePage
