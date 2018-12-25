@@ -22,7 +22,7 @@ class BaseTest(object):
         # chrome_options.add_argument("--start-maximized")
         #
         # driver = webdriver.Remote(
-        #     command_executor='http://selenoid:selenoid@172.28.28.217:4445/wd/hub',
+        #     command_executor='http://127.0.0.0.1:4444/wd/hub',
         #     desired_capabilities=desired_cap)
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
