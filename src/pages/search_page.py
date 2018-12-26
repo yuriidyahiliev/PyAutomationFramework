@@ -1,4 +1,5 @@
 from selene import browser
+from selene.config import base_url
 from selene.support.jquery_style_selectors import s
 
 from src.pages.base_page import BasePage
@@ -10,7 +11,7 @@ class SearchPage(BasePage):
     def __init__(self):
         self.search_input = s("[name ='q']")
 
-    def open(self, url="https://google.com.ua"):
+    def open(self, url='/'):
         browser.open_url(url)
         return self
 

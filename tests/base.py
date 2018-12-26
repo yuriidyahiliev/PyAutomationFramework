@@ -1,10 +1,9 @@
 import pytest
-from selene import config, browser
-from selene.browser import set_driver, driver
-from selene.browsers import BrowserName
+from selene import browser, config
 from selenium import webdriver
-from selenium.webdriver import DesiredCapabilities
 from webdriver_manager.chrome import ChromeDriverManager
+
+from src.utils.config_parser import get_config_by_key
 
 desired_cap = {'browserName': 'chrome',
                'version': '69.0',
@@ -13,6 +12,8 @@ desired_cap = {'browserName': 'chrome',
 
 
 class BaseTest(object):
+
+    config.base_url = get_config_by_key("ui", "url")
 
     @pytest.fixture(scope="session", autouse=True)
     def setup(self):
@@ -24,6 +25,8 @@ class BaseTest(object):
         # driver = webdriver.Remote(
         #     command_executor='http://127.0.0.0.1:4444/wd/hub',
         #     desired_capabilities=desired_cap)
+
+        # For remote test execution
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
 

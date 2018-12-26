@@ -8,5 +8,5 @@ setup(
     license='',
     author='yury',
     author_email='',
-    description=''
+    description='', requires=['yaml', 'PyYAML']
 )

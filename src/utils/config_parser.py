@@ -1,15 +1,11 @@
-import configparser
-import json
+import yaml
+
+
+def get_config_by_key(first_key, second_key):
+    with open("config.yml", 'r') as ymlfile:
+        cfg = yaml.load(ymlfile)
+        return cfg[first_key][second_key]
 
 
 class ConfigParser:
-    file_name = 'config.json'
-
-    def __init__(self):
-        self.config = configparser.ConfigParser()
-
-    def get_config_by_key(self, first_key, second_key):
-        with open(self.file_name, 'r') as f:
-            self.config = json.load(f)
-
-        return self.config[first_key][second_key]
+    pass
