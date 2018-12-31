@@ -10,7 +10,6 @@ definitions:
 pipelines:
   default:
     - step:
-        image: java:8
         caches:
           - pip
         script: # Modify the commands below to build your repository.
