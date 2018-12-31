@@ -7,4 +7,4 @@ rm -rf allure-report
 
 pytest tests
 
-allure_gen/allure-2.7.0/bin/allure generate report
+allure_gen/bin/allure generate report
