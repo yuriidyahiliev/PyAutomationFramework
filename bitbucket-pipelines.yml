@@ -1,5 +1,6 @@
 image: python:3.6.8
-       java:8
+options:
+  docker: true
 
 definitions:
   services:
