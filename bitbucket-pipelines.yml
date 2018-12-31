@@ -10,11 +10,9 @@ definitions:
 pipelines:
   default:
     - step:
+        image: java:8
         caches:
           - pip
         script: # Modify the commands below to build your repository.
           - pip3 install -r requirements.txt
-    - step:
-        image: java:8
-        script:
-          - python3 -m pytest tests
+          - bash ./run.sh
