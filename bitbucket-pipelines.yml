@@ -17,4 +17,4 @@ pipelines:
     - step:
         image: java:8
         script:
-          - bash ./run.sh
+          - ./run.sh
