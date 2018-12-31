@@ -16,7 +16,5 @@ pipelines:
           - pip3 install -r requirements.txt
     - step:
         image: java:8
-        caches:
-          - pip3
         script:
-          - ./run.sh
+          - pytest tests
