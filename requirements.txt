@@ -5,3 +5,4 @@ pytest-env==0.6.2
 requests==2.21.0
 setuptools==40.6.3
 webdriver-manager==1.7.0
+pyyaml==3.13
