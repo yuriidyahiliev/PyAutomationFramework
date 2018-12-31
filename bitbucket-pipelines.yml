@@ -1,5 +1,10 @@
 image: python:3.6.8
 
+definitions:
+  services:
+    java:
+      image: openjdk:8
+
 pipelines:
   default:
     - step:
