@@ -15,6 +15,6 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - pip3 install -r requirements.txt
     - step:
+        image: java:8
         script:
-          image: java:8
           - bash ./run.sh
