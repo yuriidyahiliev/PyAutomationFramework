@@ -15,8 +15,8 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - pip3 install -r requirements.txt
     - step:
-        caches:
-          - pytest
         image: java:8
+        caches:
+          - pip3
         script:
           - ./run.sh
