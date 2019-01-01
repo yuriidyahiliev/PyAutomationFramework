@@ -2,7 +2,6 @@ import unittest
 
 from selene import browser, config
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 
 from src.utils.config_parser import get_config_by_key
 
@@ -31,7 +30,7 @@ class BaseTest(unittest.TestCase):
         #     command_executor='http://127.0.0.0.1:4444/wd/hub',
         #     desired_capabilities=desired_cap)
 
-        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome()
 
         browser.set_driver(cls.driver)
 
