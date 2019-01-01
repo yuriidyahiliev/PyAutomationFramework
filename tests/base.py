@@ -20,6 +20,10 @@ class BaseTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
         # For remote test execution
 
         # chrome_options = webdriver.ChromeOptions()
@@ -31,7 +35,7 @@ class BaseTest(unittest.TestCase):
         #     command_executor='http://127.0.0.0.1:4444/wd/hub',
         #     desired_capabilities=desired_cap)
 
-        cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager("2.45").install())
+        cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager("2.45").install(), chrome_options=chrome_options)
 
         browser.set_driver(cls.driver)
 
