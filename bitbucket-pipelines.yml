@@ -12,7 +12,7 @@ pipelines:
     - step:
         caches:
           - pip
-        script: # Modify the commands below to build your repository.
+        script:
           - pip3 install -r requirements.txt
-          - apt-get update && apt-get install openjdk-8-jdk
+          - sudo apt-get update && sudo apt-get install -y openjdk-8-jdk
           - bash ./run.sh
