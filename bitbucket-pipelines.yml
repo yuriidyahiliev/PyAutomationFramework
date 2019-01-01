@@ -14,5 +14,5 @@ pipelines:
           - pip
         script: # Modify the commands below to build your repository.
           - pip3 install -r requirements.txt
-          - apt-get install default-jdk
+          - apt-get update && apt-get install openjdk-8-jdk
           - bash ./run.sh
