@@ -10,6 +10,6 @@ class TestSearch(BaseTest):
     def test_user_can_search(self):
         (BasePage.at(SearchPage())
             .open()
-            .search("Selenium")
+            .search("Autoline")
             .get_search_results()
             .should(have.size_at_least(1)))
